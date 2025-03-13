@@ -2,6 +2,8 @@
 
 A robust, customizable procedural maze generator for Unity that creates playable maze levels with collectibles, enemies, and interactive elements.
 
+![Maze Generator Example](images/maze-example.png)
+
 ## 🎮 Features
 
 - **Procedural Maze Generation**: Creates unique mazes every time using depth-first search algorithm
