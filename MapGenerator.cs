@@ -102,6 +102,7 @@ public class MapGenerator : MonoBehaviour
     {
         if (terrainAssets != null && terrainAssets.Length > 0)
         {
+            // Randomly select one set of terrain assets
             _selectedTerrainAssets = terrainAssets[Random.Range(0, terrainAssets.Length)];
             // Try to set cellSize based on the north wall prefab's length
             if (_selectedTerrainAssets.northWallPrefabs != null && _selectedTerrainAssets.northWallPrefabs.Count > 0)
@@ -123,12 +124,6 @@ public class MapGenerator : MonoBehaviour
     
     private void Start()
     {
-        // Randomly select one set of terrain assets
-        if (terrainAssets != null && terrainAssets.Length > 0)
-            _selectedTerrainAssets = terrainAssets[Random.Range(0, terrainAssets.Length)];
-        else
-            Debug.LogError("No terrain assets assigned!");
-
         // Initialize collectible tracker array
         _collectibleInCell = new bool[width, height];
 
